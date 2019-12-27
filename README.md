@@ -20,7 +20,7 @@
 >
 >ID/Password가 존재하는지 확인
 
->![SignUP1](https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/2.PNG?raw=true)
+><img align="right" src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/2.PNG?raw=true">
 >
 >ID/Password 30번씩 입력
 
