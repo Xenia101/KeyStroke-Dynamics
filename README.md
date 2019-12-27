@@ -16,13 +16,10 @@
 ## 사용 방법 [http://nichijou.kr:5073](http://nichijou.kr:5073/)
 ### 회원가입 
 
-><img align="left" src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/1.PNG?raw=true">
->
->ID/Password가 존재하는지 확인
-
-><img align="right" src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/2.PNG?raw=true">
->
->ID/Password 30번씩 입력
+<p float="left">
+  <img align="left" src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/1.PNG?raw=true">
+  <img align="right" src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/2.PNG?raw=true">
+<>
 
 
 ### 로그인
