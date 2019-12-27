@@ -13,6 +13,12 @@
 해당 프로젝트는 웹 기반으로 동작합니다.
 - Python Flask
 
+## 동작 방식
+
+<p align="center">
+  <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/frame.png?raw=true">
+</p>
+
 ## 사용 방법 [http://nichijou.kr:5073](http://nichijou.kr:5073/)
 ### 회원가입 
 
