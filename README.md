@@ -17,7 +17,6 @@
 
 <p align="center">
   <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/frame.png?raw=true">
-  <p>전체적인 </p>
 </p>
 
 ## 사용 방법 [http://nichijou.kr:5073](http://nichijou.kr:5073/)
