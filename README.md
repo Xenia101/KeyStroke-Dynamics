@@ -1,5 +1,7 @@
 # User Verification based on Keystroke Dynamics 
-<center><img src="http://nichijou.kr:5073/static/img/HAIS1.png"></center>
+<p align="center">
+  <img src="http://nichijou.kr:5073/static/img/HAIS1.png">
+</p>
 
 사용자 인증 시 개인마다의 고유한 키보드 입력 패턴을 분석하여 사용자에 대한 인증을 수행하는 서비스입니다.
 
