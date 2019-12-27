@@ -17,10 +17,9 @@
 ### 회원가입 
 
 <p float="left">
-  <img align="left" src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/1.PNG?raw=true">
-  <img align="right" src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/2.PNG?raw=true">
-<>
-
+  <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/1.PNG?raw=true">
+  <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/2.PNG?raw=true">
+</p>
 
 ### 로그인
 
