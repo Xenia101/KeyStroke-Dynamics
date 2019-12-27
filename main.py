@@ -162,5 +162,5 @@ def get_data():
 	return '',204
 
 if __name__ == '__main__':
-	app.run(host='www.nichijou.kr', debug=True, port=5073)
+	app.run(host='', debug=True, port=0000)
 
