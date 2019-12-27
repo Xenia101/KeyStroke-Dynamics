@@ -21,7 +21,7 @@ Key-Stroke Dynamics 기반 사용자 인증 방식과 기존 Legacy와의 비교
   <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/frame.png?raw=true">
 </p>
 
-## 사용 방법 > [http://nichijou.kr:5073](http://nichijou.kr:5073/)
+## 사용 방법 [http://nichijou.kr:5073](http://nichijou.kr:5073/)
 ### 회원가입 
 
 > <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/1.PNG?raw=true">
