@@ -15,6 +15,8 @@
 
 ## 동작 방식
 
+해당 프로젝트의 기존 Legacy와의 비교 동작 방식입니다.
+
 <p align="center">
   <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/frame.png?raw=true">
 </p>
