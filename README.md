@@ -96,8 +96,17 @@ k-NN 기반 사용자 식별 및 최적의 운영 파라미터 설정
   
   - 1개 block이 일치할 경우, 전수검색하여 분석
 
-|  |  <center>a</center> |  <center>b</center> |  <center>c</center> | <center>d</center> | <center>e</center> |
-|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-|**d1** | <center>0100101010001</center> | <center>1101001010010</center> | <center>0100101100111</center> | <center>0100010101001</center> | <center>010010110010</center> |
+  |  |  <center>a</center> |  <center>b</center> |  <center>c</center> | <center>d</center> | <center>e</center> |
+  |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
+  |**d1** | <center>0100101010001</center> | <center>1101001010010</center> | <center>0100101100111</center> | <center>0100010101001</center> | <center>010010110010</center> |
 
+
+- Example
+
+  - 100억개 data, 64bit Simhash, hamming distacne 4일때
+
+  - 5개 block 중 가장 작은것은 12bit로 구성되며, 4,096개 값 존재 
+    * 즉, 100억개 data는 4,096개 값 중 하나로 매핑됨(1개값에는 약 24,414개 data 존재))
+    
+  - 총 5개 block이므로, 최대 12만여개로 100억 대비 0.0012% 비교로 분석가능
 
