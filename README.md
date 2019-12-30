@@ -1,6 +1,6 @@
 # User Verification based on Keystroke Dynamics 
 <p align="center">
-  <img src="https://github.com/Xenia101/KeyStroke-Dynamics/blob/master/img/logo2.png?raw=true">
+  <a href="http://nichijou.kr:5073/"><img src="https://github.com/Xenia101/KeyStroke-Dynamics/blob/master/img/logo2.png?raw=true"></a>
 </p>
 
 사용자 인증 시 개인마다의 고유한 키보드 입력 패턴을 분석하여 사용자에 대한 인증을 수행하는 서비스입니다.
@@ -62,7 +62,7 @@ k-NN 기반 사용자 식별 및 최적의 운영 파라미터 설정
   <img width="400" src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/hamming_distance_graph.png?raw=true">
 </p>
 
-64비트의 Simhash의 경우 3비트 이내로 다를 때 두개의 웹 페이지를 거의 중복으로 판단하면 높은 정확도 도출 가능
+  64비트의 Simhash의 경우 3비트 이내로 다를 때 두개의 웹 페이지를 거의 중복으로 판단하면 높은 정확도 도출 가능
 
 - <strong>Simhash 고속분석(permutation and prefix matching)</strong>
 
@@ -104,6 +104,8 @@ k-NN 기반 사용자 식별 및 최적의 운영 파라미터 설정
 </p>
 
 ### 로그인
+
+1. 로그인 시도
 
 <p align="center">
   <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20in/2.PNG?raw=true">
