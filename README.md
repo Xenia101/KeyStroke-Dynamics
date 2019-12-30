@@ -31,17 +31,53 @@ k-NN 기반 사용자 식별 및 최적의 운영 파라미터 설정
   
   - 다수의 최적화 시험을 통해 k=3에서의 majority 기반 사용자 식별 진행
 
+> <p align="center">
+>   <img src="https://github.com/Xenia101/KeyStroke-Dynamics/blob/master/img/cross-validation.png?raw=true">
+>   <img src="https://github.com/Xenia101/KeyStroke-Dynamics/blob/master/img/graph.png?raw=true">
+> </p>
+>
+> 해당 모델의 Cross-Validation 동작 프레임과 결과 그래프 예시
+>
+> k값이 3일 경우 오류가 가장 적게 발생한다는 것을 알 수 있다. 
+>
+> 따라서 이 모델에 적합한 k값을 구할 수 있다.
+
+
 ## 사용 방법 [http://nichijou.kr:5073](http://nichijou.kr:5073/)
 ### 회원가입 
 
-> <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/1.PNG?raw=true">
->
-> ID/Password가 존재하는지 확인
->
-> <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/2.PNG?raw=true">
->
-> ID/Password 30번씩 입력
+<img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/1.PNG?raw=true">
+
+ID/Password가 존재하는지 확인
+
+<img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/2.PNG?raw=true">
+
+ID/Password 30번씩 입력
 
 ### 로그인
 
->![SignIn](https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20in/2.PNG?raw=true)
+![SignIn](https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20in/2.PNG?raw=true)
+
+## 대용량 데이터 운영방안 (Fast kNN)
+
+- Hash bit 길이
+
+  > Google은 80억 개의 웹 페이지의 경우 Simhash 64 bit면 충분하다고 함
+
+  Google의 논문은 전체 웹 페이지를 64 비트 지문으로 매핑하는 f = 64 사용해 k값(Hamming distance) 검증 실험 진행
+
+- Hamming distance 
+
+  - Google은 k=1~10까지 변화시켜 실험 진행
+  
+  - K값이 매우 낮으면 거의 중복되는 것이 없고, 매우 높은 값은 잘못된 웹페이지를 중복으로 지정함
+  
+  - Precision(정밀도)과 Recall이 0.75에 가까운 k=3을 선택하는 것이 타당함
+
+<p align="center">
+  <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/hamming_distance_graph.png?raw=true">
+</p>
+
+64비트의 Simhash의 경우 3비트 이내로 다를 때 두개의 웹 페이지를 거의 중복으로 판단하면 높은 정확도 도출 가능
+
+
