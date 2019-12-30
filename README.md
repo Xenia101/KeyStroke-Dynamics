@@ -42,6 +42,51 @@ k-NN 기반 사용자 식별 및 최적의 운영 파라미터 설정
 >
 > 따라서 이 모델에 적합한 k값을 구할 수 있다.
 
+## 대용량 데이터 운영방안 (Fast kNN)
+
+- <strong>Hash bit 길이</strong>
+
+  > Google은 80억 개의 웹 페이지의 경우 Simhash 64 bit면 충분하다고 함
+
+  Google의 논문은 전체 웹 페이지를 64 비트 지문으로 매핑하는 f = 64 사용해 k값(Hamming distance) 검증 실험 진행
+
+- <strong>Hamming distance</strong>
+
+  - Google은 k=1~10까지 변화시켜 실험 진행
+  
+  - K값이 매우 낮으면 거의 중복되는 것이 없고, 매우 높은 값은 잘못된 웹페이지를 중복으로 지정함
+  
+  - Precision(정밀도)과 Recall이 0.75에 가까운 k=3을 선택하는 것이 타당함
+
+<p align="center">
+  <img width="400" src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/hamming_distance_graph.png?raw=true">
+</p>
+
+64비트의 Simhash의 경우 3비트 이내로 다를 때 두개의 웹 페이지를 거의 중복으로 판단하면 높은 정확도 도출 가능
+
+- <strong>Simhash 고속분석(permutation and prefix matching)</strong>
+
+  - 4bit Simhash, hamming distance 4 이하 검색 시
+  
+  - Simhash를 5개 영역으로 구분(13, 13, 13, 13, 12 bit)
+  
+  - hamming distance 4이하면, 5개 block 중 최소한 1개는 일치해야 함
+  
+  - 1개 block이 일치할 경우, 전수검색하여 분석
+
+  |  |  <center>a</center> |  <center>b</center> |  <center>c</center> | <center>d</center> | <center>e</center> |
+  |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
+  |**d1** | <center>0100101010001</center> | <center>1101001010010</center> | <center>0100101100111</center> | <center>0100010101001</center> | <center>010010110010</center> |
+
+
+- <strong>Example</strong>
+
+  - 100억개 data, 64bit Simhash, hamming distacne 4일때
+
+  - 5개 block 중 가장 작은것은 12bit로 구성되며, 4,096개 값 존재 
+    * 즉, 100억개 data는 4,096개 값 중 하나로 매핑됨(1개값에는 약 24,414개 data 존재))
+    
+  - 총 5개 block이므로, 최대 12만여개로 100억 대비 0.0012% 비교로 분석가능
 
 ## 사용 방법 [http://nichijou.kr:5073](http://nichijou.kr:5073/)
 ### 회원가입 
@@ -61,52 +106,6 @@ k-NN 기반 사용자 식별 및 최적의 운영 파라미터 설정
 ### 로그인
 
 <p align="center">
-  ![SignIn](https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20in/2.PNG?raw=true)
+  <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20in/2.PNG?raw=true">
 </p>
-
-## 대용량 데이터 운영방안 (Fast kNN)
-
-- Hash bit 길이
-
-  > Google은 80억 개의 웹 페이지의 경우 Simhash 64 bit면 충분하다고 함
-
-  Google의 논문은 전체 웹 페이지를 64 비트 지문으로 매핑하는 f = 64 사용해 k값(Hamming distance) 검증 실험 진행
-
-- Hamming distance 
-
-  - Google은 k=1~10까지 변화시켜 실험 진행
-  
-  - K값이 매우 낮으면 거의 중복되는 것이 없고, 매우 높은 값은 잘못된 웹페이지를 중복으로 지정함
-  
-  - Precision(정밀도)과 Recall이 0.75에 가까운 k=3을 선택하는 것이 타당함
-
-<p align="center">
-  <img width="400" src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/hamming_distance_graph.png?raw=true">
-</p>
-
-64비트의 Simhash의 경우 3비트 이내로 다를 때 두개의 웹 페이지를 거의 중복으로 판단하면 높은 정확도 도출 가능
-
-- Simhash 고속분석(permutation and prefix matching)
-
-  - 4bit Simhash, hamming distance 4 이하 검색 시
-  
-  - Simhash를 5개 영역으로 구분(13, 13, 13, 13, 12 bit)
-  
-  - hamming distance 4이하면, 5개 block 중 최소한 1개는 일치해야 함
-  
-  - 1개 block이 일치할 경우, 전수검색하여 분석
-
-  |  |  <center>a</center> |  <center>b</center> |  <center>c</center> | <center>d</center> | <center>e</center> |
-  |:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
-  |**d1** | <center>0100101010001</center> | <center>1101001010010</center> | <center>0100101100111</center> | <center>0100010101001</center> | <center>010010110010</center> |
-
-
-- Example
-
-  - 100억개 data, 64bit Simhash, hamming distacne 4일때
-
-  - 5개 block 중 가장 작은것은 12bit로 구성되며, 4,096개 값 존재 
-    * 즉, 100억개 data는 4,096개 값 중 하나로 매핑됨(1개값에는 약 24,414개 data 존재))
-    
-  - 총 5개 block이므로, 최대 12만여개로 100억 대비 0.0012% 비교로 분석가능
 
