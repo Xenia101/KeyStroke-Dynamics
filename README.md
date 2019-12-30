@@ -22,6 +22,15 @@ Key-Stroke Dynamics 기반 사용자 인증 방식과 기존 Legacy와의 비교
   <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/frame.png?raw=true">
 </p>
 
+## 검증 결과
+k-NN 기반 사용자 식별 및 최적의 운영 파라미터 설정
+
+  - Euclidean distance 방식의 거리측정
+
+  - 정확한 데이터분석을 위해 Cross-Validation 이용
+  
+  - 다수의 최적화 시험을 통해 k=3에서의 majority 기반 사용자 식별 진행
+
 ## 사용 방법 [http://nichijou.kr:5073](http://nichijou.kr:5073/)
 ### 회원가입 
 
