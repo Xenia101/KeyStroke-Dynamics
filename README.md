@@ -23,7 +23,7 @@ Key-Stroke Dynamics 기반 사용자 인증 방식과 기존 Legacy와의 비교
 </p>
 
 ## 검증 결과
-k-NN 기반 사용자 식별 및 최적의 운영 파라미터 설정
+- **k-NN 기반 사용자 식별 및 최적의 운영 파라미터 설정**
 
   - Euclidean distance 방식의 거리측정
 
@@ -31,16 +31,21 @@ k-NN 기반 사용자 식별 및 최적의 운영 파라미터 설정
   
   - 다수의 최적화 시험을 통해 k=3에서의 majority 기반 사용자 식별 진행
 
-> <p align="center">
->   <img src="https://github.com/Xenia101/KeyStroke-Dynamics/blob/master/img/cross-validation.png?raw=true">
->   <img src="https://github.com/Xenia101/KeyStroke-Dynamics/blob/master/img/graph.png?raw=true">
-> </p>
->
-> 해당 모델의 Cross-Validation 동작 프레임과 결과 그래프 예시
->
-> k값이 3일 경우 오류가 가장 적게 발생한다는 것을 알 수 있다. 
->
-> 따라서 이 모델에 적합한 k값을 구할 수 있다.
+  <p align="center">
+    <img src="https://github.com/Xenia101/KeyStroke-Dynamics/blob/master/img/cross-validation.png?raw=true">
+    <img src="https://github.com/Xenia101/KeyStroke-Dynamics/blob/master/img/graph.png?raw=true">
+  </p>
+  
+  > ↑ 해당 모델의 Cross-Validation 동작 프레임과 결과 그래프 예시
+  >
+  > k값이 3일 경우 오류가 가장 적게 발생한다는 것을 알 수 있다. 
+  >
+  > 따라서 이 모델에 적합한 k값을 구할 수 있다.
+
+- **5-Cross Validation 기반 분석결과**
+
+  97.6%, 92.2%, 97.1%, 100%, 97.1% 으로 평균 Accuracy **96.8%** 결과 산출
+
 
 ## 대용량 데이터 운영방안 (Fast kNN)
 
@@ -62,7 +67,7 @@ k-NN 기반 사용자 식별 및 최적의 운영 파라미터 설정
   <img width="400" src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/hamming_distance_graph.png?raw=true">
 </p>
 
-  64비트의 Simhash의 경우 3비트 이내로 다를 때 두개의 웹 페이지를 거의 중복으로 판단하면 높은 정확도 도출 가능
+  **64비트의 Simhash의 경우 3비트 이내로 다를 때 두개의 웹 페이지를 거의 중복으로 판단하면 높은 정확도 도출 가능**
 
 - <strong>Simhash 고속분석(permutation and prefix matching)</strong>
 
