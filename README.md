@@ -46,17 +46,23 @@ k-NN 기반 사용자 식별 및 최적의 운영 파라미터 설정
 ## 사용 방법 [http://nichijou.kr:5073](http://nichijou.kr:5073/)
 ### 회원가입 
 
-<img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/1.PNG?raw=true">
+1. ID/Password가 존재하는지 확인
 
-ID/Password가 존재하는지 확인
+<p align="center">
+  <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/1.PNG?raw=true">
+</p>
 
-<img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/2.PNG?raw=true">
+2. ID/Password 30번씩 입력
 
-ID/Password 30번씩 입력
+<p align="center">
+  <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/2.PNG?raw=true">
+</p>
 
 ### 로그인
 
-![SignIn](https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20in/2.PNG?raw=true)
+<p align="center">
+  ![SignIn](https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20in/2.PNG?raw=true)
+</p>
 
 ## 대용량 데이터 운영방안 (Fast kNN)
 
@@ -75,9 +81,23 @@ ID/Password 30번씩 입력
   - Precision(정밀도)과 Recall이 0.75에 가까운 k=3을 선택하는 것이 타당함
 
 <p align="center">
-  <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/hamming_distance_graph.png?raw=true">
+  <img width="400" src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/hamming_distance_graph.png?raw=true">
 </p>
 
 64비트의 Simhash의 경우 3비트 이내로 다를 때 두개의 웹 페이지를 거의 중복으로 판단하면 높은 정확도 도출 가능
+
+- Simhash 고속분석(permutation and prefix matching)
+
+  - 4bit Simhash, hamming distance 4 이하 검색 시
+  
+  - Simhash를 5개 영역으로 구분(13, 13, 13, 13, 12 bit)
+  
+  - hamming distance 4이하면, 5개 block 중 최소한 1개는 일치해야 함
+  
+  - 1개 block이 일치할 경우, 전수검색하여 분석
+
+|  |  <center>a</center> |  <center>b</center> |  <center>c</center> | <center>d</center> | <center>e</center> |
+|:--------:|:--------:|:--------:|:--------:|:--------:|:--------:|
+|**d1** | <center>0100101010001</center> | <center>1101001010010</center> | <center>0100101100111</center> | <center>0100010101001</center> | <center>010010110010</center> |
 
 
