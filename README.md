@@ -93,7 +93,7 @@ Key-Stroke Dynamics 기반 사용자 인증 방식과 기존 Legacy와의 비교
     
   - 총 5개 block이므로, 최대 12만여개로 100억 대비 0.0012% 비교로 분석가능
 
-## 사용 방법 [http://nichijou.kr:5073](http://nichijou.kr:5073/)
+## 사용 방법 [Nichijou.kr/KeyStroke-Dynamics](http://nichijou.kr:5073/)
 ### 회원가입 
 
 1. ID/Password가 존재하는지 확인
