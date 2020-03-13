@@ -5,9 +5,9 @@
 
 사용자 인증 시 개인마다의 고유한 키보드 입력 패턴을 분석하여 사용자에 대한 인증을 수행하는 서비스입니다.
 
-### Key-Stroke Dynamics 란?
-> Keystroke dynamics, keystroke biometrics, typing dynamics and lately typing biometrics, is the detailed timing information which describes exactly when each key was pressed and when it was released as a person is typing at a computer keyboard.
-[WIKIPEDIA](https://en.wikipedia.org/wiki/Keystroke_dynamics)
+### Autoregressive integrated moving average() 란?
+> In statistics and econometrics, and in particular in time series analysis, an autoregressive integrated moving average (ARIMA) model is a generalization of an autoregressive moving average (ARMA) model. Both of these models are fitted to time series data either to better understand the data or to predict future points in the series (forecasting).
+[WIKIPEDIA](https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average)
 
 ## 설치 방법
 해당 프로젝트는 웹 기반으로 동작합니다.
