@@ -22,9 +22,6 @@ def home() :
 def login():
 	if request.method == 'POST':
 		data = dict(request.get_json())
-
-		print(data)
-
 		new_X = data['data']
 		id = data['id']
 		pwd = data['pwd']
@@ -129,7 +126,6 @@ def check():
 def get_data():
 	if request.method == 'POST':
 		r_data = dict(request.get_json())
-		print(r_data['data'])
 		data = r_data['data']
 		id  = r_data['id']
 		pwd = r_data['pwd']
@@ -154,9 +150,7 @@ def get_data():
 			pickle.dump(D, f)
 			f.close()
 		# feature hashing
-
 		print('[+] feature hashing completed..')
-
 
 		return '',204
 	return '',204
