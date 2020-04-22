@@ -94,6 +94,8 @@ Key-Stroke Dynamics 기반 사용자 인증 방식과 기존 Legacy와의 비교
 ## 사용 방법 [Nichijou.kr/KeyStroke-Dynamics](http://nichijou.kr:5073/)
 ### 회원가입 
 
+> 해당 방법은 예시입니다. 실제 운영시, 회원가입 30번 입력은 필요하지 않습니다.
+
 1. ID/Password가 존재하는지 확인
 
 <p align="center">
