@@ -1,3 +1,5 @@
+# 구현 예시
+
 from flask import Flask, render_template, redirect, request, url_for, jsonify
 from sklearn.preprocessing import MultiLabelBinarizer
 from sklearn.neighbors.nearest_centroid import NearestCentroid
