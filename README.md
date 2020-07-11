@@ -96,13 +96,17 @@ Key-Stroke Dynamics 기반 사용자 인증 방식과 기존 Legacy와의 비교
 
 > 해당 방법은 예시입니다. 실제 운영시, 회원가입 30번 입력은 필요하지 않습니다.
 
+<p align="center">
 1. ID/Password가 존재하는지 확인
+</p>
 
 <p align="center">
   <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/1.PNG?raw=true">
 </p>
 
+<p align="center">
 2. ID/Password 30번씩 입력
+</p>
 
 <p align="center">
   <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20up/2.PNG?raw=true">
@@ -110,7 +114,9 @@ Key-Stroke Dynamics 기반 사용자 인증 방식과 기존 Legacy와의 비교
 
 ### 로그인
 
+<p align="center">
 1. 로그인 시도
+</p>
 
 <p align="center">
   <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/sign%20in/2.PNG?raw=true">
