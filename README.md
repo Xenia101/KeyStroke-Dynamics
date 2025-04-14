@@ -1,7 +1,4 @@
 # User Verification based on Keystroke Dynamics 
-<p align="center">
-  <a href="http://nichijou.kr:5073/"><img src="https://github.com/Xenia101/KeyStroke-Dynamics/blob/master/img/logo2.png?raw=true"></a>
-</p>
 
 사용자 인증 시 개인마다의 고유한 키보드 입력 패턴을 분석하여 사용자에 대한 인증을 수행하는 서비스입니다.
 
@@ -19,7 +16,7 @@
 Key-Stroke Dynamics 기반 사용자 인증 방식과 기존 Legacy와의 비교 동작 방식입니다.
 
 <p align="center">
-  <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/frame.png?raw=true">
+  <img src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/images/frame.png?raw=true">
 </p>
 
 ## 검증 결과
@@ -32,8 +29,8 @@ Key-Stroke Dynamics 기반 사용자 인증 방식과 기존 Legacy와의 비교
   - 다수의 최적화 시험을 통해 k=3에서의 majority 기반 사용자 식별 진행
 
   <p align="center">
-    <img src="https://github.com/Xenia101/KeyStroke-Dynamics/blob/master/img/cross-validation.png?raw=true">
-    <img src="https://github.com/Xenia101/KeyStroke-Dynamics/blob/master/img/graph.png?raw=true">
+    <img src="https://github.com/Xenia101/KeyStroke-Dynamics/blob/master/images/cross-validation.png?raw=true">
+    <img src="https://github.com/Xenia101/KeyStroke-Dynamics/blob/master/images/graph.png?raw=true">
   </p>
   
   > ↑ 해당 모델의 Cross-Validation 동작 프레임과 결과 그래프 예시
@@ -62,7 +59,7 @@ Key-Stroke Dynamics 기반 사용자 인증 방식과 기존 Legacy와의 비교
   - Precision(정밀도)과 Recall이 0.75에 가까운 k=3을 선택하는 것이 타당함
 
 <p align="center">
-  <img width="400" src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/img/hamming_distance_graph.png?raw=true">
+  <img width="400" src="https://github.com/Xenia101/Key-Stroke-Dynamics/blob/master/images/hamming_distance_graph.png?raw=true">
 </p>
 
   **64비트의 Simhash의 경우 3비트 이내로 다를 때 두개의 웹 페이지를 거의 중복으로 판단하면 높은 정확도 도출 가능**
